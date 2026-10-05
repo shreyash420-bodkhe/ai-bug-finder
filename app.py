@@ -15,6 +15,15 @@ from reports import create_json_report, create_pdf_report, report_as_markdown
 
 st.set_page_config(page_title="AI Bug Finder", page_icon=":material/bug_report:", layout="wide")
 
+try:
+    deployment_secrets = st.secrets
+except FileNotFoundError:
+    deployment_secrets = {}
+
+for secret_name in ("BUGFINDER_ADMIN_EMAIL", "BUGFINDER_ADMIN_PASSWORD"):
+    if not os.getenv(secret_name) and deployment_secrets.get(secret_name):
+        os.environ[secret_name] = str(deployment_secrets[secret_name])
+
 auth_store = AuthStore()
 history_store = HistoryStore()
 auth_enabled = os.getenv("BUGFINDER_AUTH_ENABLED", "true").lower() == "true"

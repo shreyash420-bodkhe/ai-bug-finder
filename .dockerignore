@@ -1,0 +1,8 @@
+.git
+.venv
+.venv-1
+__pycache__
+.pytest_cache
+database/history.db
+database/history.json
+.streamlit/secrets.toml

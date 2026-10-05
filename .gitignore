@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/secrets.toml
+database/history.json
+database/history.db
+database/users.db
+error.log

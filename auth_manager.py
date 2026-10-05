@@ -41,11 +41,11 @@ class AuthStore:
 
     @property
     def admin_email(self) -> str:
-        return os.getenv("BUGFINDER_ADMIN_EMAIL", "admin@123").strip().lower()
+        return os.getenv("BUGFINDER_ADMIN_EMAIL", "").strip().lower()
 
     @property
     def admin_password(self) -> str:
-        return os.getenv("BUGFINDER_ADMIN_PASSWORD", "admin123321")
+        return os.getenv("BUGFINDER_ADMIN_PASSWORD", "")
 
     @staticmethod
     def _password_hash(password: str, salt: bytes) -> str:
@@ -83,8 +83,10 @@ class AuthStore:
         if not cleaned_email or not cleaned_password:
             return False, None
 
-        if hmac.compare_digest(cleaned_email, self.admin_email):
-            if hmac.compare_digest(cleaned_password, self.admin_password):
+        admin_email = self.admin_email
+        admin_password = self.admin_password
+        if admin_email and admin_password and hmac.compare_digest(cleaned_email, admin_email):
+            if hmac.compare_digest(cleaned_password, admin_password):
                 return True, "admin"
             return False, None
 
