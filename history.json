@@ -1,0 +1,813 @@
+[
+  {
+    "id": "26a023649b35470ba0fe33c7a478ba08",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:44:32.813674+00:00",
+    "source": "# 120-Line Python Program Intentionally Filled With Every Type of Error\n# Designed for debugging practice, code review, or testing linters.\n\nimport os\nimport math\nimport random\n# ERROR: Importing a module that does not exist (ModuleNotFoundError)\nimport non_existent_module_xyz \n\n# Global variable for testing\nGLOBAL_COUNT = \"100\"\n\ndef calculate_area(radius):\n    # ERROR: Using an undefined variable (NameError)\n    # ERROR: Indentation error on the next line (mixed spaces/tabs)\n\tarea = math.pi * (radus ** 2)\n    return area\n\ndef process_user_data(user_list):\n    # ERROR: Logical error - modifying a list while iterating over it\n    for user in user_list:\n        if user == \"Admin\":\n            user_list.remove(user)\n            \n    # ERROR: Syntax Error - missing colon at the end of the if statement\n    if len(user_list) > 0\n        print(\"Users remain\")\n    \n    # ERROR: Index Error - trying to access an element out of bounds\n    print(\"The last user is: \" + user_list[105])\n    return user_list\n\ndef mathematical_chaos(a, b):\n    # ERROR: ZeroDivisionError if b is 0, but forced here by a logical mistake\n    result = a / (b - b) \n    \n    # ERROR: Type Error - trying to add a string to an integer\n    total = result + \"20\"\n    \n    # ERROR: Local variable referenced before assignment (UnboundLocalError)\n    print(temporary_value)\n    temporary_value = 50\n    \n    return total\n\nclass Vehicle:\n    # ERROR: Syntax Error - misspelled '__init__' method\n    def __int__(self, make, model):\n        self.make = make\n        self.model = model\n    \n    def display_info(self):\n        # ERROR: Attribute Error - self.year was never defined\n        print(f\"Vehicle: {self.make} {self.model} ({self.year})\")\n\ndef file_operations():\n    # ERROR: FileNotFoundError - opening a non-existent file without try-except\n    file = open(\"completely_imaginary_file.txt\", \"r\")\n    content = file.read()\n    \n    # ERROR: Resource Leak - file is never closed if an error happens above\n    file.close()\n    return content\n\ndef list_and_dict_errors():\n    my_list = [1, 2, 3, 4, 5]\n    my_dict = {\"name\": \"Alice\", \"age\": 25}\n    \n    # ERROR: Key Error - key 'salary' does not exist\n    print(my_dict[\"salary\"])\n    \n    # ERROR: Type Error - lists cannot be used as dictionary keys\n    bad_dict = {my_list: \"corrupted\"}\n    \n    # ERROR: Value Error - unpacking too many values\n    x, y = my_list \n    \n    return x, y\n\ndef string_manipulation():\n    greeting = \"Hello World\"\n    \n    # ERROR: Type Error - strings are immutable, cannot assign to items\n    greeting[0] = \"h\"\n    \n    # ERROR: Attribute Error - string has no 'reverse' attribute\n    reversed_greeting = greeting.reverse()\n    \n    return reversed_greeting\n\ndef recursion_nightmare(number):\n    # ERROR: Infinite Recursion (RecursionError) - missing a base case\n    print(f\"Current recursion number: {number}\")\n    return recursion_nightmare(number + 1)\n\ndef scope_confusion():\n    # ERROR: Trying to increment a global string variable as an integer\n    GLOBAL_COUNT = GLOBAL_COUNT + 1\n    return GLOBAL_COUNT\n\ndef syntax_galore_and_logic_flops():\n    # ERROR: Syntax Error - using a reserved keyword as a variable name\n    pass = \"not allowed\"\n    \n    # ERROR: Logical Error - string comparison with wrong capitalization\n    if \"admin\" == \"Admin\":\n        print(\"Access granted\")\n        \n    # ERROR: Syntax Error - single quotes not closed properly\n    print('Unclosed string literal...)\n    \n    # ERROR: Memory Error simulation (will crash if executed)\n    huge_list = [i for i in range(1000000000000000)]\n    return huge_list\n\ndef final_mess():\n    # ERROR: OverflowError - floating point limits exceeded\n    huge_float = math.exp(1000)\n    \n    # ERROR: Evaluation Error using dangerous/broken eval\n    eval(\"if x = 5:\") \n    \n    return huge_float\n\n# --- MAIN EXECUTION BLOCK ---\n# This block attempts to run everything, triggering immediate crashes.\nif __name__ == \"__main__\":\n    print(\"Starting the ultimate broken Python program...\")\n    \n    # Triggering errors one by one\n    print(calculate_area(5))\n    \n    sample_users = [\"Alice\", \"Bob\", \"Admin\"]\n    process_user_data(sample_users)\n    \n    mathematical_chaos(10, 5)\n    \n    my_car = Vehicle(\"Toyota\", \"Corolla\")\n    my_car.display_info()\n    \n    file_operations()\n    list_and_dict_errors()\n    string_manipulation()\n    recursion_nightmare(1)\n    scope_confusion()\n    syntax_galore_and_logic_flops()\n    final_mess()\n    \n    print(\"If you see this line, a miracle occurred and no errors were caught.\")\n",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "unindent does not match any outer indentation level",
+          "line": 17,
+          "column": 16,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "f2bc4bdd091c4ea8b699e4d0013be657",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:49:37.109355+00:00",
+    "source": "a=\"helloo\"\nprint(\"the m,essage is :\"a)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "331ecbda696d448bbb0c047adc36e1fd",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:50:11.924710+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"a)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "2ebfa1815c05401aae33619bfd35eea3",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:50:13.535619+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"a)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "368fd49866794908a3e76452dd47b2e7",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:50:13.733108+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"a)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "d9b5e52b97234ab2bcc2b4802bc01db9",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:50:13.904500+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"a)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "985a928379424ff3875f69b5952f8924",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:50:14.054317+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"a)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "c285ac14a40c485387a22f417d152863",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:50:19.344938+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"a)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "a5f5673617fe4f3fb1f94966ac2360a9",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:50:58.856859+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"a)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "085c65c42fa4425eaa8149a93a9ae261",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:00.562327+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"a)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "b23fb71f978b4d819ed88b8e71217752",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:00.758109+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"a)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "4291d79a29204f549640645e8754f141",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:00.911491+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"a)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "96b83a0c4acc4f33989cf20fd4593fc6",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:01.084282+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"a)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "7c9a7339e1dd4f4f8e2f433f39e91fdb",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:01.386766+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"a)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "6083ca5fcdae4013b5362deaf36d4359",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:01.559191+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"a)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "6ec325089a0740a3bf2bf2e54115ba3f",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:07.301313+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"name)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "782521cf1ed640d1b9333a4ed7f46249",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:10.419320+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"name)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "bec2c42e1f3e4d46bcd9df62045a6539",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:10.877017+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"name)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "575d3cbe96ec4d2db381994a37d34008",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:11.101749+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"name)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "5c01c8020e5749339700fbe5c8f61501",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:11.289487+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"name)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "fbd433f397a14607bf3d97a9d25db5f8",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:11.463094+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"name)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "6bf6c78b854b42e6bebb1b8627bbf4f2",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:23.593889+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"name)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "355975042f894ee5a0c0004b8258b213",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:24.053431+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"name)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "12cae7ee1e714983a95e62c42854847e",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:25.912397+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"name)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "3b00b3ac7efc46d09e3f953d299091b7",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:26.351817+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"name)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "c9dccea7788a4eeb8079de01e54a5ce6",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:26.576760+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"name)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "cde21ed7180840a6a694274d5a4d814a",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:51:28.560809+00:00",
+    "source": "name=\"hello\"\nprint(\"the message is :\"name)",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax. Perhaps you forgot a comma?",
+          "line": 2,
+          "column": 7,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "e80aa0395d424691b27930c10f2b92df",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:52:09.574502+00:00",
+    "source": "num=12\nprint(num)",
+    "result": {
+      "issues": [],
+      "summary": {
+        "total": 0,
+        "errors": 0,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "e9005c92bc8a46e29a760f0283d966b3",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T07:54:30.264404+00:00",
+    "source": "```python\nimport random\nimport json\nimport os\nfrom datetime import datetime\n\nclass QuizGame:\n    def __init__(self):\n        self.questions = [\n            {\n                \"question\": \"What is the output of 2 + 3?\",\n                \"options\": [\"4\", \"5\", \"6\", \"7\"],\n                \"answer\": \"5\"\n            },\n            {\n                \"question\": \"Which language is used for web development?\",\n                \"options\": [\"Python\", \"HTML\", \"C\", \"Java\"],\n                \"answer\": \"HTML\"\n            },\n            {\n                \"question\": \"Which keyword defines a function in Python?\",\n                \"options\": [\"function\", \"def\", \"fun\", \"define\"],\n                \"answer\": \"def\"\n            },\n            {\n                \"question\": \"Which data type stores True or False?\",\n                \"options\": [\"int\", \"str\", \"bool\", \"float\"],\n                \"answer\": \"bool\"\n            },\n            {\n                \"question\": \"Which symbol is used for comments in Python?\",\n                \"options\": [\"//\", \"#\", \"/*\", \"--\"],\n                \"answer\": \"#\"\n            },\n            {\n                \"question\": \"What does CPU stand for?\",\n                \"options\": [\n                    \"Central Processing Unit\",\n                    \"Computer Personal Unit\",\n                    \"Central Program Unit\",\n                    \"Control Processing User\"\n                ],\n                \"answer\": \"Central Processing Unit\"\n            },\n            {\n                \"question\": \"Which method adds an item to a list?\",\n                \"options\": [\"add()\", \"insert()\", \"append()\", \"push()\"],\n                \"answer\": \"append()\"\n            },\n            {\n                \"question\": \"Which symbol is used for multiplication?\",\n                \"options\": [\"x\", \"*\", \"%\", \"#\"],\n                \"answer\": \"*\"\n            },\n            {\n                \"question\": \"Which collection does not allow duplicate values?\",\n                \"options\": [\"List\", \"Tuple\", \"Set\", \"String\"],\n                \"answer\": \"Set\"\n            },\n            {\n                \"question\": \"What is 10 // 3 in Python?\",\n                \"options\": [\"3\", \"3.33\", \"1\", \"0\"],\n                \"answer\": \"3\"\n            }\n        ]\n        self.score = 0\n        self.total = 0\n        self.username = \"\"\n\n    def clear_screen(self):\n        os.system(\"cls\" if os.name == \"nt\" else \"clear\")\n\n    def get_name(self):\n        while True:\n            self.username = input(\"Enter your name: \").strip()\n            if self.username:\n                break\n            print(\"Name cannot be empty.\")\n\n    def show_header(self):\n        print(\"=\" * 60)\n        print(\"                 PYTHON QUIZ GAME\")\n        print(\"=\" * 60)\n        print(f\"Player: {self.username}\")\n        print()\n\n    def show_question(self, question, number):\n        print(f\"Question {number}\")\n        print(\"-\" * 60)\n        print(question[\"question\"])\n        print()\n        for index, option in enumerate(question[\"options\"], 1):\n            print(f\"{index}. {option}\")\n        print()\n\n    def get_answer(self):\n        while True:\n            choice = input(\"Enter option number: \").strip()\n            if choice.isdigit():\n                number = int(choice)\n                if 1 <= number <= 4:\n                    return number\n            print(\"Please enter a number from 1 to 4.\")\n\n    def play(self):\n        questions = self.questions.copy()\n        random.shuffle(questions)\n        self.score = 0\n        self.total = len(questions)\n\n        for number, question in enumerate(questions, 1):\n            self.clear_screen()\n            self.show_header()\n            self.show_question(question, number)\n            answer_number = self.get_answer()\n            selected = question[\"options\"][answer_number - 1]\n\n            if selected == question[\"answer\"]:\n                print(\"\\nCorrect!\")\n                self.score += 1\n            else:\n                print(f\"\\nWrong! Correct answer: {question['answer']}\")\n\n            input(\"\\nPress Enter to continue...\")\n\n    def calculate_percentage(self):\n        if self.total == 0:\n            return 0\n        return (self.score / self.total) * 100\n\n    def get_grade(self):\n        percentage = self.calculate_percentage()\n        if percentage == 100:\n            return \"A+\"\n        if percentage >= 80:\n            return \"A\"\n        if percentage >= 60:\n            return \"B\"\n        if percentage >= 40:\n            return \"C\"\n        return \"D\"\n\n    def show_result(self):\n        self.clear_screen()\n        percentage = self.calculate_percentage()\n        grade = self.get_grade()\n\n        print(\"=\" * 60)\n        print(\"                    RESULT\")\n        print(\"=\" * 60)\n        print(f\"Player       : {self.username}\")\n        print(f\"Score        : {self.score}/{self.total}\")\n        print(f\"Percentage   : {percentage:.2f}%\")\n        print(f\"Grade        : {grade}\")\n        print(\"=\" * 60)\n\n        if percentage == 100:\n            print(\"Excellent performance!\")\n        elif percentage >= 80:\n            print(\"Great job!\")\n        elif percentage >= 60:\n            print(\"Good work!\")\n        elif percentage >= 40:\n            print(\"Keep practicing!\")\n        else:\n            print(\"Practice more and try again!\")\n\n    def save_result(self):\n        filename = \"quiz_results.json\"\n\n        result = {\n            \"name\": self.username,\n            \"score\": self.score,\n            \"total\": self.total,\n            \"percentage\": round(self.calculate_percentage(), 2),\n            \"grade\": self.get_grade(),\n            \"date\": datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\")\n        }\n\n        data = []\n\n        if os.path.exists(filename):\n            try:\n                with open(filename, \"r\") as file:\n                    data = json.load(file)\n            except:\n                data = []\n\n        data.append(result)\n\n        with open(filename, \"w\") as file:\n            json.dump(data, file, indent=4)\n\n    def show_history(self):\n        self.clear_screen()\n        filename = \"quiz_results.json\"\n\n        print(\"=\" * 60)\n        print(\"                    HISTORY\")\n        print(\"=\" * 60)\n\n        if not os.path.exists(filename):\n            print(\"No results found.\")\n            input(\"\\nPress Enter to continue...\")\n            return\n\n        try:\n            with open(filename, \"r\") as file:\n                data = json.load(file)\n        except:\n            print(\"Unable to read history.\")\n            input(\"\\nPress Enter to continue...\")\n            return\n\n        if not data:\n            print(\"No results found.\")\n        else:\n            for index, result in enumerate(data, 1):\n                print(f\"\\nAttempt {index}\")\n                print(f\"Name       : {result['name']}\")\n                print(f\"Score      : {result['score']}/{result['total']}\")\n                print(f\"Percentage : {result['percentage']}%\")\n                print(f\"Grade      : {result['grade']}\")\n                print(f\"Date       : {result['date']}\")\n\n        input(\"\\nPress Enter to continue...\")\n\n    def menu(self):\n        while True:\n            self.clear_screen()\n            print(\"=\" * 60)\n            print(\"                  PYTHON QUIZ GAME\")\n            print(\"=\" * 60)\n            print(\"1. Start Quiz\")\n            print(\"2. View History\")\n            print(\"3. Exit\")\n            print(\"=\" * 60)\n\n            choice = input(\"Enter your choice: \").strip()\n\n            if choice == \"1\":\n                self.play()\n                self.show_result()\n                self.save_result()\n                input(\"\\nPress Enter to return to menu...\")\n            elif choice == \"2\":\n                self.show_history()\n            elif choice == \"3\":\n                self.clear_screen()\n                print(\"Thank you for playing!\")\n                break\n            else:\n                print(\"Invalid choice.\")\n                input(\"Press Enter to continue...\")\n\ndef main():\n    game = QuizGame()\n    game.get_name()\n    game.menu()\n\nif __name__ == \"__main__\":\n    main()\n```\n",
+    "result": {
+      "issues": [
+        {
+          "category": "SyntaxError",
+          "title": "Invalid Python syntax",
+          "message": "invalid syntax",
+          "line": 1,
+          "column": 1,
+          "severity": "error",
+          "bug_id": "E020",
+          "solution": "Check colons, brackets, quotes, commas, and the line immediately before the error."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "errors": 1,
+        "warnings": 0
+      },
+      "fixed_code": null
+    }
+  },
+  {
+    "id": "bce2329fc47b4305bd4677de19051112",
+    "user": "Developer",
+    "filename": "Paste code",
+    "created_at": "2026-09-26T08:39:59.240916+00:00",
+    "source": "import random\nimport json\nimport os\nclass GuessGame:\n    def __init__(self):\n        self.player = \"\"\n        self.score = 0\n        self.attempts = 0\n        self.history_file = \"game_history.json\"\n    def welcome(self):\n        print(\"=\" * 45)\n        print(\"          GUESS THE NUMBER GAME\")\n        print(\"=\" * 45)\n        self.player = input(\"Enter your name: \").strip()\n        if not self.player:\n            self.player = \"Player\"\n        print(\"Welcome,\", self.player)\n    def choose_level(self):\n        print(\"\\nChoose difficulty\")\n        print(\"1. Easy   (1-50)\")\n        print(\"2. Medium (1-100)\")\n        print(\"3. Hard   (1-500)\")\n        while True:\n            choice = input(\"Enter choice: \").strip()\n            if choice == \"1\":\n                return 50, 10\n            if choice == \"2\":\n                return 100, 7\n            if choice == \"3\":\n                return 500, 12\n            print(\"Invalid choice. Try again.\")\n    def play_round(self):\n        maximum, limit = self.choose_level()\n        number = random.randint(1, maximum)\n        self.attempts = 0\n        print(f\"\\nGuess a number between 1 and {maximum}.\")\n        print(f\"You have {limit} attempts.\")\n        while self.attempts < limit:\n            value = input(\"Enter your guess: \").strip()\n            if not value.isdigit():\n                print(\"Enter a valid number.\")\n                continue\n            guess = int(value)\n            if guess < 1 or guess > maximum:\n                print(\"Number is outside the range.\")\n                continue\n            self.attempts += 1\n            if guess == number:\n                points = (limit - self.attempts + 1) * 10\n                self.score += points\n                print(\"Correct!\")\n                print(\"Attempts:\", self.attempts)\n                print(\"Points:\", points)\n                return True\n            if guess < number:\n                print(\"Too low!\")\n            else:\n                print(\"Too high!\")\n            remaining = limit - self.attempts\n            print(\"Attempts remaining:\", remaining)\n        print(\"Game over!\")\n        print(\"The number was:\", number)\n        return False\n    def save_result(self, won):\n        data = []\n        if os.path.exists(self.history_file):\n            try:\n                with open(self.history_file, \"r\") as file:\n                    data = json.load(file)\n            except (json.JSONDecodeError, OSError):\n                data = []\n        result = {\n            \"player\": self.player,\n            \"won\": won,\n            \"attempts\": self.attempts,\n            \"score\": self.score\n        }\n        data.append(result)\n        with open(self.history_file, \"w\") as file:\n            json.dump(data, file, indent=4)\n    def show_history(self):\n        print(\"\\n========== HISTORY ==========\")\n        if not os.path.exists(self.history_file):\n            print(\"No history found.\")\n            return\n        try:\n            with open(self.history_file, \"r\") as file:\n                data = json.load(file)\n        except (json.JSONDecodeError, OSError):\n            print(\"No valid history found.\")\n            return\n        if not data:\n            print(\"No games played yet.\")\n            return\n        for index, item in enumerate(data, 1):\n            status = \"Won\" if item[\"won\"] else \"Lost\"\n            print(f\"{index}. {item['player']} | {status} | Score: {item['score']}\")\n    def run(self):\n        self.welcome()\n        while True:\n            print(\"\\n1. Play Game\")\n            print(\"2. History\")\n            print(\"3. Exit\")\n            choice = input(\"Enter choice: \").strip()\n            if choice == \"1\":\n                won = self.play_round()\n                self.save_result(won)\n                print(\"Total score:\", self.score)\n            elif choice == \"2\":\n                self.show_history()\n            elif choice == \"3\":\n                print(\"Thanks for playing!\")\n                break\n            else:\n                print(\"Invalid choice.\")\ndef main():\n    game = GuessGame()\n    game.run()\nif __name__ == \"__main__\":\n    main()",
+    "result": {
+      "issues": [
+        {
+          "category": "Security",
+          "title": "Review use of run()",
+          "message": "Process execution needs strict argument and input validation.",
+          "line": 118,
+          "column": 5,
+          "severity": "warning",
+          "rule": "unsafe-run",
+          "bug_id": "S001",
+          "solution": "Use safe parsers such as ast.literal_eval, avoid shell interpolation, and validate untrusted input."
+        },
+        {
+          "category": "LogicError",
+          "title": "Possible infinite loop",
+          "message": "This while True loop has no break statement in its body.",
+          "line": 23,
+          "column": 9,
+          "severity": "warning",
+          "rule": "infinite-loop",
+          "bug_id": null,
+          "solution": "Review the diagnostic and inspect nearby values."
+        }
+      ],
+      "summary": {
+        "total": 2,
+        "errors": 0,
+        "warnings": 2
+      },
+      "fixed_code": null
+    }
+  }
+]
